@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import type { AdapterTarget, DesignBrief, DesignOutput } from '@nexus/core';
+import type { AdapterTarget, DesignBrief, DesignOutput, InstructionBundle } from '@nexus/core';
 
 export function parseArgMap(argv: string[]): Map<string, string> {
   const pairs = new Map<string, string>();
@@ -61,8 +61,22 @@ export function getOutputDir(map: Map<string, string>): string {
   return map.get('output') ?? 'dist/nexus';
 }
 
-export function findInstructionBundle(output: DesignOutput): Record<string, unknown> {
-  return output.artifacts.find((artifact) => artifact.kind === 'instruction-bundle')?.content ?? {};
+export function findInstructionBundle(output: DesignOutput): InstructionBundle | Record<string, unknown> {
+  const content = output.artifacts.find((artifact) => artifact.kind === 'instruction-bundle')?.content;
+
+  if (!content || typeof content !== 'object') {
+    return {};
+  }
+
+  const candidate = content as {
+    bundle?: unknown;
+  };
+
+  if (candidate.bundle && typeof candidate.bundle === 'object') {
+    return candidate.bundle as InstructionBundle;
+  }
+
+  return content as Record<string, unknown>;
 }
 
 export function extractPalette(output: DesignOutput): {

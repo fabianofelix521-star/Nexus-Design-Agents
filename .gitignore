@@ -11,3 +11,4 @@ coverage
 .nexus-hermes-smoke
 artifacts
 *.vsix
+examples/*/out

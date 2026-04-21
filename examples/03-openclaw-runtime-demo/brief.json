@@ -1,0 +1,16 @@
+{
+  "projectName": "nexus-openclaw-demo",
+  "objective": "Export a Nexus instruction bundle and negotiate capabilities with an OpenClaw-style runtime.",
+  "audience": ["agent framework engineers"],
+  "channels": ["agent-runtime"],
+  "constraints": [
+    {
+      "name": "portable runtime contract",
+      "description": "Artifacts must be machine-readable and host-neutral.",
+      "severity": "hard"
+    }
+  ],
+  "moods": ["systemic", "credible"],
+  "targetFramework": "react",
+  "targetRuntimes": ["openclaw"]
+}

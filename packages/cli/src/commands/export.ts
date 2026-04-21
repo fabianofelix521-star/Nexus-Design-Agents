@@ -15,13 +15,24 @@ import {
   writeText,
 } from './shared.js';
 
-function isInstructionBundle(value: Record<string, unknown>): value is InstructionBundle {
+function isInstructionBundle(value: unknown): value is InstructionBundle {
+  if (!value || typeof value !== 'object') {
+    return false;
+  }
+
+  const candidate = value as {
+    target?: unknown;
+    messages?: unknown;
+    files?: unknown;
+    metadata?: unknown;
+  };
+
   return (
-    typeof value.target === 'string' &&
-    Array.isArray(value.messages) &&
-    Array.isArray(value.files) &&
-    typeof value.metadata === 'object' &&
-    value.metadata !== null
+    typeof candidate.target === 'string' &&
+    Array.isArray(candidate.messages) &&
+    Array.isArray(candidate.files) &&
+    typeof candidate.metadata === 'object' &&
+    candidate.metadata !== null
   );
 }
 

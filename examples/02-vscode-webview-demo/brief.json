@@ -1,0 +1,21 @@
+{
+  "projectName": "nexus-vscode-webview-demo",
+  "objective": "Generate a VS Code-friendly instruction bundle and preview it as a lightweight webview-style experience.",
+  "audience": ["extension authors", "design engineers"],
+  "channels": ["web", "desktop", "agent-runtime"],
+  "constraints": [
+    {
+      "name": "accessibility baseline",
+      "description": "Respect semantics and reduced-motion defaults.",
+      "severity": "hard"
+    },
+    {
+      "name": "portable output",
+      "description": "The same bundle should be exportable and previewable outside the extension host.",
+      "severity": "hard"
+    }
+  ],
+  "moods": ["credible", "cinematic", "systemic"],
+  "targetFramework": "react",
+  "targetRuntimes": ["vscode"]
+}

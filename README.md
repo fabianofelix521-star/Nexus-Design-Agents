@@ -19,6 +19,16 @@ node packages/cli/dist/index.js init .
 node packages/cli/dist/index.js export --brief .nexus/brief.example.json --target vscode --output dist/nexus
 ```
 
+## Demo scripts
+
+```bash
+pnpm demo:vscode
+pnpm demo:openclaw
+pnpm demo:hermes
+```
+
+Each command builds the workspace first and then writes target-specific demo output under `examples/`.
+
 ## Supported targets
 
 - VS Code via `.github/copilot-instructions.md`

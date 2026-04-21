@@ -1,0 +1,16 @@
+{
+  "projectName": "nexus-hermes-demo",
+  "objective": "Export a Nexus instruction bundle and negotiate capabilities with a Hermes-style runtime.",
+  "audience": ["agent runtime teams"],
+  "channels": ["agent-runtime"],
+  "constraints": [
+    {
+      "name": "streaming-aware runtime contract",
+      "description": "The handshake must expose missing and agreed capabilities clearly.",
+      "severity": "hard"
+    }
+  ],
+  "moods": ["credible", "adaptive"],
+  "targetFramework": "react",
+  "targetRuntimes": ["hermes-agent"]
+}
