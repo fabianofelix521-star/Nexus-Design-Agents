@@ -1,0 +1,22 @@
+request:
+  target: hermes-agent
+  protocolVersion: 2026-04-21
+  entryFile: agents/hermes/nexus-agent.yaml
+  bundleCapabilities:
+    - multi-agent
+    - tool-use
+    - streaming
+  selectedAgents:
+    - UIArchitectAgent
+    - AgentBridgeAgent
+  framework: react
+response:
+  target: hermes-agent
+  accepted: true
+  protocolVersion: 2026-04-21
+  agreedCapabilities:
+    - multi-agent
+    - tool-use
+  missingCapabilities:
+    - streaming
+  entryFile: agents/hermes/nexus-agent.yaml

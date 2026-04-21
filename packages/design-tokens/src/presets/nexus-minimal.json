@@ -1,0 +1,10 @@
+{
+  "name": "nexus-minimal",
+  "description": "Low-noise neutral palette for agent workspaces and dense productivity UIs.",
+  "colors": {
+    "ink": "oklch(18% 0.02 255)",
+    "canvas": "oklch(98% 0.01 95)",
+    "accent": "oklch(63% 0.16 196)",
+    "support": "oklch(82% 0.03 240)"
+  }
+}

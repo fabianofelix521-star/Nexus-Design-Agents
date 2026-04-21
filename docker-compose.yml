@@ -1,0 +1,7 @@
+services:
+  nexus-cli:
+    image: node:22-bookworm
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    command: sh -lc "corepack enable && pnpm install && pnpm build"

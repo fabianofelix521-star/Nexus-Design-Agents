@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nexus OpenClaw Adapter Manifest",
+  "type": "object",
+  "required": [
+    "kind",
+    "name",
+    "version",
+    "target",
+    "entry",
+    "protocolVersion",
+    "transport",
+    "capabilities",
+    "handshake"
+  ],
+  "properties": {
+    "kind": {
+      "const": "nexus-runtime-adapter"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "target": {
+      "const": "openclaw"
+    },
+    "entry": {
+      "type": "string"
+    },
+    "protocolVersion": {
+      "type": "string"
+    },
+    "transport": {
+      "type": "object",
+      "required": ["mode", "payload"],
+      "properties": {
+        "mode": {
+          "enum": ["stdin", "file", "json-rpc"]
+        },
+        "payload": {
+          "const": "json"
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "handshake": {
+      "type": "object",
+      "required": ["requestType", "responseType", "requiresAck", "supportedArtifacts"],
+      "properties": {
+        "requestType": {
+          "const": "nexus.handshake.init"
+        },
+        "responseType": {
+          "const": "openclaw.handshake.ack"
+        },
+        "requiresAck": {
+          "type": "boolean"
+        },
+        "supportedArtifacts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

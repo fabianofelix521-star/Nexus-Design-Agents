@@ -1,0 +1,39 @@
+{
+  "name": "@nexus/cli",
+  "version": "3.1.0",
+  "description": "CLI for generating Nexus Design AGI bundles, tokens, and starter surfaces.",
+  "keywords": [
+    "cli",
+    "design-agents",
+    "vscode",
+    "codegen"
+  ],
+  "type": "module",
+  "bin": {
+    "nexus": "dist/index.js"
+  },
+  "dependencies": {
+    "@nexus/component-forge": "workspace:*",
+    "@nexus/core": "workspace:*",
+    "@nexus/design-tokens": "workspace:*"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "typecheck": "tsc -b tsconfig.json --pretty false"
+  }
+}

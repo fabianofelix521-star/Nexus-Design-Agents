@@ -1,0 +1,13 @@
+node_modules
+dist
+.turbo
+.pnpm-store
+coverage
+*.tsbuildinfo
+.DS_Store
+.nexus
+.nexus-smoke
+.nexus-openclaw-smoke
+.nexus-hermes-smoke
+artifacts
+*.vsix

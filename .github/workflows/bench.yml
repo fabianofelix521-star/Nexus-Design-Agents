@@ -1,0 +1,11 @@
+name: Bench
+
+on:
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Add throughput and bundle-size benchmarks for CLI exports and agent orchestration."

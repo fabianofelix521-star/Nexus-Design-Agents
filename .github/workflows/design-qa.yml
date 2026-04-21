@@ -1,0 +1,11 @@
+name: Design QA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Integrate design heuristics and artifact diff checks here."

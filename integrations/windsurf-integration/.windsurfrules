@@ -1,0 +1,5 @@
+Apply Nexus Design AGI runtime behavior.
+
+- Treat design decisions as executable constraints.
+- Favor portable exports that can be diffed and reviewed.
+- Keep motion, contrast, and semantics explicit.

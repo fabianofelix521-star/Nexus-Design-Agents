@@ -1,0 +1,31 @@
+{
+  "$schema": "./schema.json",
+  "kind": "nexus-runtime-adapter",
+  "name": "nexus-openclaw-adapter",
+  "version": "0.1.0",
+  "target": "openclaw",
+  "entry": "instruction-bundle.json",
+  "protocolVersion": "2026-04-21",
+  "transport": {
+    "mode": "stdin",
+    "payload": "json"
+  },
+  "capabilities": [
+    "multi-agent",
+    "tool-use",
+    "code-editing",
+    "plan-management",
+    "long-context"
+  ],
+  "handshake": {
+    "requestType": "nexus.handshake.init",
+    "responseType": "openclaw.handshake.ack",
+    "requiresAck": true,
+    "supportedArtifacts": [
+      "instruction-bundle",
+      "workflow",
+      "component-spec"
+    ]
+  },
+  "description": "Connects Nexus instruction bundles to an OpenClaw-compatible runtime."
+}

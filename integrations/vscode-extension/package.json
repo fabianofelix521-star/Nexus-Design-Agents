@@ -1,0 +1,65 @@
+{
+  "name": "nexus-vscode-extension",
+  "version": "0.1.0",
+  "publisher": "felix",
+  "type": "module",
+  "displayName": "Nexus Design AGI",
+  "description": "Portable multi-agent design runtime for VS Code with bundle generation, surface export, and brief review commands.",
+  "preview": true,
+  "main": "./dist/extension.cjs",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "design",
+    "agents",
+    "multi-agent",
+    "code-generation",
+    "vscode"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "galleryBanner": {
+    "color": "#111827",
+    "theme": "dark"
+  },
+  "extensionKind": [
+    "workspace"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "nexus.generateBundle",
+        "title": "Nexus: Generate Instruction Bundle"
+      },
+      {
+        "command": "nexus.exportSurface",
+        "title": "Nexus: Export Starter Surface"
+      },
+      {
+        "command": "nexus.reviewBrief",
+        "title": "Nexus: Review Brief"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "package:vsix": "mkdir -p ../../artifacts && vsce package --allow-missing-repository --out ../../artifacts/nexus-design-agi.vsix",
+    "publish:vsix": "vsce publish --allow-missing-repository",
+    "typecheck": "tsc -b tsconfig.json --pretty false"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.2",
+    "@types/vscode": "^1.95.0",
+    "esbuild": "^0.25.10"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@nexus/design-tokens",
+  "version": "3.1.0",
+  "description": "OKLCH-first token generators and transformers for Nexus Design AGI.",
+  "keywords": [
+    "design-tokens",
+    "oklch",
+    "tailwind",
+    "figma"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "typecheck": "tsc -b tsconfig.json --pretty false"
+  }
+}

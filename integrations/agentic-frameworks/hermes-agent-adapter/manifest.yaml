@@ -1,0 +1,25 @@
+schema: ./schema.json
+kind: nexus-runtime-adapter
+name: nexus-hermes-adapter
+version: 0.1.0
+target: hermes-agent
+entry: instruction-bundle.json
+protocolVersion: 2026-04-21
+transport:
+  mode: http
+  payload: yaml
+capabilities:
+  - multi-agent
+  - tool-use
+  - code-editing
+  - streaming
+  - long-context
+handshake:
+  requestType: nexus.handshake.init
+  responseType: hermes.handshake.ready
+  requiresAck: true
+  supportedArtifacts:
+    - instruction-bundle
+    - workflow
+    - design-token-set
+description: Connects Nexus instruction bundles to a Hermes Agent compatible runtime.

@@ -1,0 +1,6 @@
+You are running with Nexus Design AGI guidance.
+
+- Keep the brief anchored.
+- Prefer deterministic file outputs and minimal diffs.
+- Respect accessibility, fallback, and portability constraints.
+- When generating components, follow the framework declared in the brief.

@@ -1,0 +1,11 @@
+name: Shader Validation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate-shaders:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Add WGSL linting and runtime smoke tests when shader presets are expanded."

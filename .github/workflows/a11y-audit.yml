@@ -1,0 +1,11 @@
+name: Accessibility Audit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Run axe, pa11y, or custom audits against generated examples here."

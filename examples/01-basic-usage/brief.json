@@ -1,0 +1,21 @@
+{
+  "projectName": "nexus-design-agi",
+  "objective": "Build a portable design-agent runtime that exports to AI coding environments and agent frameworks.",
+  "audience": ["tooling teams", "design engineers"],
+  "channels": ["web", "agent-runtime"],
+  "constraints": [
+    {
+      "name": "accessibility baseline",
+      "description": "Respect semantics and reduced-motion defaults.",
+      "severity": "hard"
+    },
+    {
+      "name": "portable outputs",
+      "description": "Produce artifacts that adapt cleanly across hosts.",
+      "severity": "hard"
+    }
+  ],
+  "moods": ["cinematic", "credible", "systemic"],
+  "targetFramework": "react",
+  "targetRuntimes": ["vscode", "cursor", "openclaw", "hermes-agent"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "nexus-cinematic",
+  "description": "Warm, high-contrast cinematic palette for ambitious product surfaces.",
+  "colors": {
+    "ink": "oklch(15% 0.04 260)",
+    "canvas": "oklch(96% 0.01 95)",
+    "accent": "oklch(68% 0.22 32)",
+    "support": "oklch(79% 0.08 210)"
+  }
+}

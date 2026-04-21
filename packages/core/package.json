@@ -1,0 +1,32 @@
+{
+  "name": "@nexus/core",
+  "version": "3.1.0",
+  "description": "Portable cognitive runtime and multi-agent orchestration for Nexus Design AGI.",
+  "keywords": [
+    "design-agents",
+    "multi-agent",
+    "vscode",
+    "ai-runtime"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "typecheck": "tsc -b tsconfig.json --pretty false"
+  }
+}

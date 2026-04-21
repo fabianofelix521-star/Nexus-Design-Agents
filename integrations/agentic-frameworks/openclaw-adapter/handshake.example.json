@@ -1,0 +1,18 @@
+{
+  "request": {
+    "target": "openclaw",
+    "protocolVersion": "2026-04-21",
+    "entryFile": "agents/openclaw/nexus-agent.json",
+    "bundleCapabilities": ["multi-agent", "tool-use", "plan-management"],
+    "selectedAgents": ["UIArchitectAgent", "AgentBridgeAgent"],
+    "framework": "react"
+  },
+  "response": {
+    "target": "openclaw",
+    "accepted": true,
+    "protocolVersion": "2026-04-21",
+    "agreedCapabilities": ["multi-agent", "tool-use"],
+    "missingCapabilities": ["plan-management"],
+    "entryFile": "agents/openclaw/nexus-agent.json"
+  }
+}
