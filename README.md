@@ -54,6 +54,8 @@ See [docs/getting-started.md](docs/getting-started.md), [docs/architecture.md](d
 
 Public packages are versioned with Changesets and published through the GitHub release workflow. See [docs/publishing.md](docs/publishing.md) for the exact flow and required secrets.
 
+The repository is published at `https://github.com/fabianofelix521-star/Nexus-Design-Agents`, and the VS Code extension release flow is handled separately through a dedicated VSIX packaging workflow.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/release-flow.md](docs/release-flow.md) for the local git and branch workflow.

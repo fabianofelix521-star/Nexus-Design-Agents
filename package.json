@@ -3,6 +3,14 @@
   "version": "3.1.0",
   "private": true,
   "type": "module",
+  "homepage": "https://github.com/fabianofelix521-star/Nexus-Design-Agents",
+  "bugs": {
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents.git"
+  },
   "packageManager": "pnpm@10.33.0",
   "scripts": {
     "build": "pnpm -r --if-present build",

@@ -2,6 +2,10 @@
   "name": "@nexus/core",
   "version": "3.1.0",
   "description": "Portable cognitive runtime and multi-agent orchestration for Nexus Design AGI.",
+  "homepage": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/tree/main/packages/core",
+  "bugs": {
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/issues"
+  },
   "keywords": [
     "design-agents",
     "multi-agent",
@@ -9,6 +13,11 @@
     "ai-runtime"
   ],
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents.git",
+    "directory": "packages/core"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,

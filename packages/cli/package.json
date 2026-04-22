@@ -2,6 +2,10 @@
   "name": "@nexus/cli",
   "version": "3.1.0",
   "description": "CLI for generating Nexus Design AGI bundles, tokens, and starter surfaces.",
+  "homepage": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/tree/main/packages/cli",
+  "bugs": {
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/issues"
+  },
   "keywords": [
     "cli",
     "design-agents",
@@ -9,6 +13,11 @@
     "codegen"
   ],
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents.git",
+    "directory": "packages/cli"
+  },
   "bin": {
     "nexus": "dist/index.js"
   },

@@ -6,6 +6,15 @@
   "displayName": "Nexus Design AGI",
   "description": "Portable multi-agent design runtime for VS Code with bundle generation, surface export, and brief review commands.",
   "preview": true,
+  "homepage": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/tree/main/integrations/vscode-extension",
+  "bugs": {
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabianofelix521-star/Nexus-Design-Agents.git",
+    "directory": "integrations/vscode-extension"
+  },
   "main": "./dist/extension.cjs",
   "engines": {
     "vscode": "^1.95.0"
@@ -53,8 +62,8 @@
   "scripts": {
     "build": "node ./scripts/build.mjs",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
-    "package:vsix": "mkdir -p ../../artifacts && vsce package --allow-missing-repository --out ../../artifacts/nexus-design-agi.vsix",
-    "publish:vsix": "vsce publish --allow-missing-repository",
+    "package:vsix": "node ./scripts/release.mjs package",
+    "publish:vsix": "node ./scripts/release.mjs publish",
     "typecheck": "tsc -b tsconfig.json --pretty false"
   },
   "devDependencies": {

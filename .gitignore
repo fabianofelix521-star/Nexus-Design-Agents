@@ -12,3 +12,4 @@ coverage
 artifacts
 *.vsix
 examples/*/out
+integrations/vscode-extension/.release-tmp
